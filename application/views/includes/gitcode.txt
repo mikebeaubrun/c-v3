@@ -3,3 +3,4 @@ git code
 git branch - cambiar de version
 git status
 git log, para ver quien hizo los cambios
+git checkout namevesion, para cambiar  de branch
