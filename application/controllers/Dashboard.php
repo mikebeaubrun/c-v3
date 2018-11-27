@@ -13,6 +13,12 @@ class Dashboard extends CI_Controller {
 	}
 		public function login()
 		{
-		/*	$this->load->view('login');*/
+			/*print_r($_POST);*/
+			if ($_POST['username'] && $_POST['password']) {
+				$login=$this->Site_model->loginUser($_POST);
+				print_r($login);
+				# code...
+			}
+			$this->load->view('login');
 		}
 }

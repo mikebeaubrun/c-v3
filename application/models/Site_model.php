@@ -2,9 +2,21 @@
 
 class Site_model extends CI_Model {
 	
-	public	function login()
+	public	function loginUser($data)
 	{
-		
+		$this->db->select("*");
+		$this->db->from("profesores");
+		$this->db->where("username",$data['username']);
+	    $this->db->where("password",$data['password']);
+
+	    $query=$this->db->get();
+	    if ($query->num_rows()>0) {
+	    	return $query->result();
+	    	# code...
+	    } else{
+	    	return NULL;
+	    }
+
 	}
 	/*public function insertProfesor()
 	{

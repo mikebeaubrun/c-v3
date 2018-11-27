@@ -34,32 +34,22 @@
 	  <div id="login-page">
 	  	<div class="container">
 	  	
-		      <form class="form-login" action="index.html">
-		        <h2 class="form-login-heading">sign in now</h2>
+		      <form class="form-login" action="" method="post">
+		        <h2 class="form-login-heading">Panel</h2>
 		        <div class="login-wrap">
-		            <input type="text" class="form-control" placeholder="User ID" autofocus>
+		            <input name="username" type="text" class="form-control" placeholder="usuario" autofocus>
 		            <br>
-		            <input type="password" class="form-control" placeholder="Password">
+		            <input name="password" type="password" class="form-control" placeholder="contraseña">
 		            <label class="checkbox">
 		                <span class="pull-right">
-		                    <a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
+		                    <a data-toggle="modal" href="login.html#myModal"> Orvidaste tu contraseña?</a>
 		
 		                </span>
 		            </label>
-		            <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
+		            <button class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> Entrar</button>
 		            <hr>
 		            
-		            <div class="login-social-link centered">
-		            <p>or you can sign in via your social network</p>
-		                <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
-		                <button class="btn btn-twitter" type="submit"><i class="fa fa-twitter"></i> Twitter</button>
-		            </div>
-		            <div class="registration">
-		                Don't have an account yet?<br/>
-		                <a class="" href="#">
-		                    Create an account
-		                </a>
-		            </div>
+		            
 		
 		        </div>
 		
@@ -69,16 +59,17 @@
 		                  <div class="modal-content">
 		                      <div class="modal-header">
 		                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		                          <h4 class="modal-title">Forgot Password ?</h4>
+		                          <h4 class="modal-title">Olvidar Contraseña</h4>
 		                      </div>
 		                      <div class="modal-body">
 		                          <p>Enter your e-mail address below to reset your password.</p>
+		                          <FORM action="" method="post" > 	
 		                          <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
 		
 		                      </div>
 		                      <div class="modal-footer">
 		                          <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
-		                          <button class="btn btn-theme" type="button">Submit</button>
+		                          <button class="btn btn-theme" type="submit">Submit</button> </FORM>
 		                      </div>
 		                  </div>
 		              </div>
@@ -91,14 +82,14 @@
 	  </div>
 
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="<?= base_url()?>assets/js/jquery.js"></script>
+    <script src="<?= base_url()?>assets/js/bootstrap.min.js"></script>
 
     <!--BACKSTRETCH-->
     <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
-    <script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
+    <script type="text/javascript" src="<?= base_url()?>assets/js/jquery.backstretch.min.js"></script>
     <script>
-        $.backstretch("assets/img/login-bg.jpg", {speed: 500});
+        $.backstretch("<?= base_url()?>assets/img/profile-02.jpg", {speed: 500});
     </script>
 
 
