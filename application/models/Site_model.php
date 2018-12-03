@@ -14,7 +14,20 @@ class Site_model extends CI_Model {
 	    	return $query->result();
 	    	# code...
 	    } else{
+	    	$this->db->select("*");
+	    	$this->db->from("alumno");
+	    	$this->db->where("username",$data['username']);
+	        $this->db->where("password",$data['password']);
+	        $queryalumno=$this->db->get();
+	        if ($queryalumno->num_rows()>0) {
+	        	# code...
+	        	return $queryalumno->result();
+	        }
+
+
 	    	return NULL;
+
+	        
 	    }
 
 	}
